@@ -1039,6 +1039,7 @@ section {
         visibility: hidden;
         transition: var(--transition);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 0;
     }
 
     .nav-menu.active {
@@ -1052,20 +1053,28 @@ section {
     }
 
     .hero-name {
-        font-size: 52px;
+        font-size: 48px;
+        letter-spacing: -1px;
     }
 
     .hero-title {
-        font-size: 26px;
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.8;
     }
 
     .hero-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .btn {
         text-align: center;
-        width: 100%;
+        flex: 1;
+        min-width: 150px;
     }
 
     .contact-content {
@@ -1080,15 +1089,27 @@ section {
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .section-title {
-        font-size: 38px;
+        font-size: 36px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
     section {
         padding: 80px 0;
     }
@@ -1101,8 +1122,17 @@ section {
         font-size: 32px;
     }
 
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+
     .hero-name {
-        font-size: 42px;
+        font-size: 40px;
     }
 
     .hero-title {
@@ -1110,48 +1140,172 @@ section {
     }
 
     .hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px 35px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .about-text h3 {
+        font-size: 28px;
+    }
+
+    .about-text p {
         font-size: 16px;
     }
 
-    .about-info {
-        grid-template-columns: 1fr;
+    .info-item {
+        padding: 25px;
+    }
+
+    .info-item i {
+        font-size: 30px;
+    }
+
+    .info-item h4 {
+        font-size: 18px;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .skill-card {
+        padding: 35px;
+    }
+
+    .skill-card h3 {
+        font-size: 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-image {
+        height: 240px;
+    }
+
+    .project-content {
+        padding: 25px;
+    }
+
+    .project-content h3 {
+        font-size: 22px;
+    }
+
+    .project-content p {
+        font-size: 15px;
+    }
+
+    .contact-info h3 {
+        font-size: 28px;
+    }
+
+    .contact-info > p {
+        font-size: 16px;
+    }
+
+    .contact-item {
+        padding: 20px;
     }
 
     .contact-form {
         padding: 30px;
     }
 
+    .form-group input,
+    .form-group textarea {
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+
     .back-to-top {
         width: 50px;
         height: 50px;
         font-size: 20px;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .scroll-indicator {
+        bottom: 30px;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .nav-container {
+        padding: 15px;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+
     .hero-name {
-        font-size: 36px;
+        font-size: 32px;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
     }
 
     .hero-title {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .greeting {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.6;
     }
 
     .section-title {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
     }
 
     .hero-buttons {
-        gap: 15px;
+        gap: 12px;
     }
 
     .btn {
-        padding: 14px 30px;
-        font-size: 15px;
+        padding: 14px 28px;
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 15px;
     }
 
     .social-links a {
@@ -1160,8 +1314,145 @@ section {
         font-size: 18px;
     }
 
+    .about-text h3 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .info-item {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .info-item i {
+        font-size: 28px;
+    }
+
+    .info-item h4 {
+        font-size: 17px;
+    }
+
+    .info-item p {
+        font-size: 14px;
+    }
+
+    .skill-card {
+        padding: 30px;
+    }
+
+    .skill-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .skill-icon i {
+        font-size: 35px;
+    }
+
+    .skill-card h3 {
+        font-size: 22px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h3 {
+        font-size: 20px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
+
+    .tag {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .contact-info h3 {
+        font-size: 24px;
+    }
+
+    .contact-info > p {
+        font-size: 15px;
+    }
+
+    .contact-item {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .contact-item i {
+        font-size: 26px;
+    }
+
+    .contact-item h4 {
+        font-size: 16px;
+    }
+
+    .contact-item p {
+        font-size: 14px;
+    }
+
     .contact-form {
-        padding: 25px;
+        padding: 25px 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .contact-form .btn {
+        font-size: 15px;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-content p {
+        font-size: 13px;
+    }
+
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .scroll-indicator {
+        bottom: 25px;
+    }
+
+    .mouse {
+        width: 26px;
+        height: 45px;
     }
 }
 
