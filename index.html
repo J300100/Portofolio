@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Ridha, S.Kom</title>
+    <title>Muhammad Ridha, S.Kom - 3D Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Three.js Canvas -->
+    <canvas id="threejs-canvas"></canvas>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="#home">J4.<span class="dot">.</span></a>
+                <a href="#home">J4<span class="dot">.</span></a>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
@@ -50,13 +53,13 @@
                     </div>
                     <div class="social-links">
                        <a href="https://github.com/J300100" target="_blank" aria-label="GitHub">
-                         <i class="fab fa-github"></i> </a>
+                         <i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/muhammad-ridha-a7b300199/" target="_blank" aria-label="LinkedIn">
-                         <i class="fab fa-linkedin"></i> </a>
+                         <i class="fab fa-linkedin"></i></a>
                     <a href="https://twitter.com/username-anda" target="_blank" aria-label="Twitter">
                          <i class="fab fa-twitter"></i></a>
                     <a href="https://www.instagram.com/mrdha01?igsh=MXJtcnB5b3p5aTJyeA%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i> </a>
+                    <i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -190,7 +193,6 @@
                 <p class="section-subtitle">Some of my recent work</p>
             </div>
             <div class="projects-grid">
-                <!-- Project 1 - Tambahkan project Anda di sini -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="1.png" alt="Project 1">
@@ -211,7 +213,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2 - Tambahkan project Anda di sini -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="2.png" alt="Project 2">
@@ -232,7 +233,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3 - Tambahkan project Anda di sini -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="3.png" alt="Project 3">
@@ -317,13 +317,13 @@
                 <p>&copy; 2025. All rights reserved by Muhammad Ridha</p>
                 <div class="footer-social">
                   <a href="https://github.com/J300100" target="_blank" aria-label="GitHub">
-                         <i class="fab fa-github"></i> </a>
+                         <i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/muhammad-ridha-a7b300199/" target="_blank" aria-label="LinkedIn">
-                         <i class="fab fa-linkedin"></i> </a>
+                         <i class="fab fa-linkedin"></i></a>
                     <a href="https://twitter.com/username-anda" target="_blank" aria-label="Twitter">
                          <i class="fab fa-twitter"></i></a>
                     <a href="https://www.instagram.com/mrdha01?igsh=MXJtcnB5b3p5aTJyeA%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i> </a>
+                    <i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -334,6 +334,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
